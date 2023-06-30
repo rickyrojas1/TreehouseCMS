@@ -4,17 +4,19 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
   "devDependencies": {},
   "dependencies": {
+    "@strapi/plugin-graphql": "^4.11.3",
     "@strapi/plugin-i18n": "4.5.5",
     "@strapi/plugin-users-permissions": "4.5.5",
     "@strapi/provider-upload-cloudinary": "4.5.5",
     "@strapi/strapi": "4.5.5",
+    "better-sqlite3": "^8.4.0",
     "pg": "8.8.0"
   },
   "author": {
