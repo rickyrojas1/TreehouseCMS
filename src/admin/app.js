@@ -1,38 +1,31 @@
+
+import favicon from './extensions/favicon.ico';
+
+
 const config = {
-  locales: [
-    // 'ar',
-    // 'fr',
-    // 'cs',
-    // 'de',
-    // 'dk',
-    // 'es',
-    // 'he',
-    // 'id',
-    // 'it',
-    // 'ja',
-    // 'ko',
-    // 'ms',
-    // 'nl',
-    // 'no',
-    // 'pl',
-    // 'pt-BR',
-    // 'pt',
-    // 'ru',
-    // 'sk',
-    // 'sv',
-    // 'th',
-    // 'tr',
-    // 'uk',
-    // 'vi',
-    // 'zh-Hans',
-    // 'zh',
-  ],
+  head: {
+    favicon: favicon,
+  },
+  locales: [],
   translations: {
     en: {
       "Auth.form.welcome.title": "Welcome to Treehouse CMS",
       "Auth.form.welcome.subtitle": "Log in to the admin panel",
       "app.components.LeftMenu.navbrand.title": "Treehouse CMS"
     },
+  },
+  theme: {
+    dark: {
+      // colors: {
+      //   primary100: '#c9ffeb',
+      //   primary200: '#5effc3',
+      //   primary500: '#00f298',
+      //   buttonPrimary500: '#fff298',
+      //   primary600: '#00bd77',
+      //   buttonPrimary600: '#ffbd77',
+      //   primary700: '#008755',
+      // }
+    }
   }
 };
 
