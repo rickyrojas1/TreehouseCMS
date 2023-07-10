@@ -10,7 +10,7 @@ const config = {
   translations: {
     en: {
       "Auth.form.welcome.title": "Welcome to Treehouse CMS",
-      "Auth.form.welcome.subtitle": "Log in to the admin panel",
+      "Auth.form.welcome.subtitle": "Log in to the CMS",
       "app.components.LeftMenu.navbrand.title": "Treehouse CMS"
     },
   },
