@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blog-post",
     "pluralName": "blog-posts",
-    "displayName": "Blog Post"
+    "displayName": "Blog Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,7 +15,7 @@
     "title": {
       "type": "string"
     },
-    "content": {
+    "content_backup": {
       "type": "richtext"
     },
     "slug": {
@@ -27,14 +28,15 @@
       "inversedBy": "authored_blog_posts"
     },
     "coverImage": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "tag": {
       "type": "enumeration",
@@ -43,6 +45,22 @@
         "New York",
         "Edibles"
       ]
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "tags": {
+      "type": "customField",
+      "options": [
+        "Education",
+        "New York:new-york",
+        "Edibles"
+      ],
+      "customField": "plugin::multi-select.multi-select"
     }
   }
 }
