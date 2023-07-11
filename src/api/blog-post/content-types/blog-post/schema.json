@@ -15,9 +15,6 @@
     "title": {
       "type": "string"
     },
-    "content_backup": {
-      "type": "richtext"
-    },
     "slug": {
       "type": "uid"
     },
@@ -38,14 +35,6 @@
         "audios"
       ]
     },
-    "tag": {
-      "type": "enumeration",
-      "enum": [
-        "Education",
-        "New York",
-        "Edibles"
-      ]
-    },
     "content": {
       "type": "customField",
       "options": {
@@ -61,6 +50,9 @@
         "Edibles"
       ],
       "customField": "plugin::multi-select.multi-select"
+    },
+    "sub_title": {
+      "type": "string"
     }
   }
 }
