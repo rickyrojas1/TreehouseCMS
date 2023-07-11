@@ -46,7 +46,7 @@
       "type": "customField",
       "options": [
         "Education",
-        "New York:new-york",
+        "New York",
         "Edibles"
       ],
       "customField": "plugin::multi-select.multi-select"
