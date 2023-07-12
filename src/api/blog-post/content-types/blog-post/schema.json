@@ -53,6 +53,12 @@
     },
     "sub_title": {
       "type": "string"
+    },
+    "tag": {
+      "type": "enumeration",
+      "enum": [
+        "Education"
+      ]
     }
   }
 }
