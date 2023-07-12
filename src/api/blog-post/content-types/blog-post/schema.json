@@ -42,22 +42,15 @@
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "tags": {
-      "type": "customField",
-      "options": [
-        "Education",
-        "New York",
-        "Edibles"
-      ],
-      "customField": "plugin::multi-select.multi-select"
-    },
     "sub_title": {
       "type": "string"
     },
     "tag": {
       "type": "enumeration",
       "enum": [
-        "Education"
+        "Education",
+        "New York",
+        "Edibles"
       ]
     }
   }
