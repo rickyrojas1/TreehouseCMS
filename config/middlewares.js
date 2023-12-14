@@ -18,7 +18,6 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
       headers: '*',
       origin: ['http://localhost:3000', 'http://localhost:1337', 'https://treehouse.up.railway.app', 'https://treehousecannabis.com'],
     },
