@@ -27,4 +27,12 @@ module.exports = ({ env }) => ({
         },
       },
     },
+    'content-source-map': {
+      enabled: true,
+      config: {
+        contentTypes: ['api::article.article', 'api::restaurant.restaurant'],
+        origin: 'strapi.io',
+        baseHref: env('NODE_ENV') === 'production' ? 'https://treehouse.up.railway.app' : 'http://localhost:1337',
+      },
+    },
   });

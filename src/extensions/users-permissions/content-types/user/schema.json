@@ -69,14 +69,27 @@
       "mappedBy": "author"
     },
     "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "dutchieId": {
+      "type": "uid"
+    },
+    "name": {
+      "type": "string"
+    },
+    "birthdate": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }
