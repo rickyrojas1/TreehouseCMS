@@ -20,7 +20,7 @@ module.exports = [
     config: {
       enabled: true,
       headers: '*',
-      origin: ['http://localhost:3000', 'http://localhost:1337', 'https://treehouse.up.railway.app'],
+      origin: ['http://localhost:3000', 'http://localhost:1337', 'https://treehouse.up.railway.app', 'https://treehousecannabis.com'],
     },
   },
   'strapi::logger',
