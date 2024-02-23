@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dispensary_weed_deliveries",
+  "info": {
+    "singularName": "dispensary-weed-delivery",
+    "pluralName": "dispensary-weed-deliveries",
+    "displayName": "dispensary weed delivery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "blog_posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog-post.blog-post",
+      "mappedBy": "dispensary_weed_delivery"
+    },
+    "name": {
+      "type": "string"
+    },
+    "SEO": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.seo"
+    }
+  }
+}

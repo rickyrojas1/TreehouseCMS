@@ -52,6 +52,12 @@
         "New York",
         "Edibles"
       ]
+    },
+    "dispensary_weed_delivery": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dispensary-weed-delivery.dispensary-weed-delivery",
+      "inversedBy": "blog_posts"
     }
   }
 }
