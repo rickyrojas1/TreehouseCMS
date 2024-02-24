@@ -23,9 +23,6 @@
         "audios"
       ]
     },
-    "about": {
-      "type": "richtext"
-    },
     "blog_posts": {
       "type": "relation",
       "relation": "oneToMany",
@@ -43,6 +40,13 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "about": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
