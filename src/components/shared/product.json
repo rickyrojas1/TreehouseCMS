@@ -2,19 +2,21 @@
   "collectionName": "components_shared_products",
   "info": {
     "displayName": "product",
-    "icon": "shoppingCart"
+    "icon": "shoppingCart",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "productImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "name": {
       "type": "string"
@@ -28,6 +30,15 @@
     "slug": {
       "type": "string",
       "unique": false
+    },
+    "productId": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "integer"
     }
   }
 }
