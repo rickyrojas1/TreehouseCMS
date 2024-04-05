@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_products",
+  "info": {
+    "displayName": "product",
+    "icon": "shoppingCart"
+  },
+  "options": {},
+  "attributes": {
+    "productImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "brand": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "unique": false
+    }
+  }
+}

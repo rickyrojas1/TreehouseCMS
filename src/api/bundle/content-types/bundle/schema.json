@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bundles",
+  "info": {
+    "singularName": "bundle",
+    "pluralName": "bundles",
+    "displayName": "bundle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bundleImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "description": {
+      "type": "text"
+    },
+    "products": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.product"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
