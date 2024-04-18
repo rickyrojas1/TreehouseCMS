@@ -43,6 +43,9 @@
     },
     "bundlePrice": {
       "type": "decimal"
+    },
+    "price": {
+      "type": "float"
     }
   }
 }
