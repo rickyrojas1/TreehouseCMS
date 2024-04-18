@@ -41,14 +41,8 @@
       "type": "uid",
       "targetField": "title"
     },
-    "bundlePrice": {
-      "type": "decimal"
-    },
     "price": {
       "type": "float"
-    },
-    "priceString": {
-      "type": "string"
     }
   }
 }
