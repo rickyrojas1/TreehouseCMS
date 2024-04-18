@@ -40,6 +40,9 @@
     "slug": {
       "type": "uid",
       "targetField": "title"
+    },
+    "price": {
+      "type": "decimal"
     }
   }
 }
