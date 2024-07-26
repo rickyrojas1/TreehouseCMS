@@ -16,10 +16,10 @@
       "type": "string"
     },
     "description": {
-      "type": "string"
+      "type": "text"
     },
     "descriptionHtml": {
-      "type": "string"
+      "type": "text"
     },
     "Effects": {
       "type": "customField",
@@ -77,7 +77,7 @@
       "type": "string"
     },
     "brandDescription": {
-      "type": "string"
+      "type": "text"
     },
     "backfilled": {
       "type": "boolean",
