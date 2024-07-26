@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "descriptionHtml": {
+      "type": "string"
+    },
+    "Effects": {
+      "type": "customField",
+      "options": [
+        "CALM",
+        "CLEAR_MIND",
+        "CREATIVE",
+        "ENERGETIC",
+        "FOCUSED",
+        "HAPPY",
+        "INSPIRED",
+        "RELAXED",
+        "SLEEPY",
+        "UPLIFTE"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "enterpriseProductId": {
+      "type": "string"
+    },
+    "dutchieId": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "posId": {
+      "type": "string"
+    },
+    "potencyCbd": {
+      "type": "string"
+    },
+    "potencyThc": {
+      "type": "string"
+    },
+    "strainType": {
+      "type": "string"
+    },
+    "subcategory": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "brandName": {
+      "type": "string"
+    },
+    "brandId": {
+      "type": "string"
+    },
+    "brandImageUrl": {
+      "type": "string"
+    },
+    "brandDescription": {
+      "type": "string"
+    },
+    "backfilled": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -17,12 +17,14 @@
     "@strapi/plugin-i18n": "4.11.0",
     "@strapi/plugin-seo": "^1.9.2",
     "@strapi/plugin-users-permissions": "4.11.0",
+    "@strapi/provider-email-sendgrid": "^4.25.4",
     "@strapi/provider-upload-cloudinary": "4.11.0",
     "@strapi/strapi": "4.11.0",
     "better-sqlite3": "^8.4.0",
     "pg": "8.8.0",
     "strapi-plugin-multi-select": "^1.1.0",
-    "strapi-plugin-sitemap": "^3.0.6"
+    "strapi-plugin-sitemap": "^3.0.6",
+    "strapi-provider-email-resend": "^1.0.4"
   },
   "author": {
     "name": "R1cky"
