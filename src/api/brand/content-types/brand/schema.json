@@ -4,10 +4,11 @@
   "info": {
     "singularName": "brand",
     "pluralName": "brands",
-    "displayName": "Brand"
+    "displayName": "Brand",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -26,6 +27,64 @@
     "uid": {
       "type": "uid",
       "targetField": "dutchieId"
+    },
+    "categories": {
+      "type": "customField",
+      "options": [
+        "VAPORIZERS - DISPOSABLES",
+        "FLOWER - DEFAULT",
+        "ACCESSORIES - BATTERIES",
+        "EDIBLES - CHOCOLATES",
+        "EDIBLES - GUMMIES",
+        "VAPORIZERS - CARTRIDGES",
+        "TINCTURES - DEFAULT",
+        "TOPICALS - BALMS",
+        "EDIBLES - DRINKS",
+        "CONCENTRATES - BADDER",
+        "EDIBLES - DEFAULT",
+        "EDIBLES - DISSOLVABLES",
+        "CONCENTRATES - LIVE_RESIN",
+        "VAPORIZERS - PODS",
+        "PRE_ROLLS - PACKS",
+        "PRE_ROLLS - SINGLES",
+        "ACCESSORIES - TRAYS",
+        "ACCESSORIES - PAPERS_ROLLING_SUPPLIES",
+        "ACCESSORIES - GRINDERS",
+        "APPAREL - DEFAULT",
+        "ACCESSORIES - STORAGE_CONTAINER"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "bannerImageUrl": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "pictures": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "labTestsUrl": {
+      "type": "string"
+    },
+    "fullDescription": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
