@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_card_transactions",
+  "info": {
+    "singularName": "gift-card-transaction",
+    "pluralName": "gift-card-transactions",
+    "displayName": "Gift Card Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "Create",
+        "Redeem",
+        "Recharge",
+        "Deactivate"
+      ]
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "previousBalance": {
+      "type": "decimal"
+    },
+    "newBalance": {
+      "type": "decimal"
+    },
+    "timestamp": {
+      "type": "datetime"
+    },
+    "manager": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "gift_card": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::gift-card.gift-card",
+      "inversedBy": "gift_card_transactions"
+    },
+    "customer": {
+      "type": "string"
+    },
+    "order_number": {
+      "type": "string"
+    }
+  }
+}

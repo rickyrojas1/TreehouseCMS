@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gift_cards",
+  "info": {
+    "singularName": "gift-card",
+    "pluralName": "gift-cards",
+    "displayName": "Gift Card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "barcode": {
+      "type": "uid"
+    },
+    "customerName": {
+      "type": "string"
+    },
+    "currentBalance": {
+      "type": "decimal"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Inactive",
+        "Deactivated",
+        "Expired"
+      ]
+    },
+    "notes": {
+      "type": "text"
+    },
+    "gift_card_transactions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::gift-card-transaction.gift-card-transaction",
+      "mappedBy": "gift_card"
+    }
+  }
+}
