@@ -50,6 +50,12 @@
     },
     "order_number": {
       "type": "string"
+    },
+    "payment_type": {
+      "type": "string"
+    },
+    "register": {
+      "type": "string"
     }
   }
 }
