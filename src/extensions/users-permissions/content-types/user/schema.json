@@ -82,14 +82,20 @@
     "dutchieId": {
       "type": "uid"
     },
-    "name": {
-      "type": "string"
-    },
-    "birthdate": {
+    "firstName": {
       "type": "string"
     },
     "phone": {
       "type": "string"
+    },
+    "alpineIqContactId": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
     }
   }
 }

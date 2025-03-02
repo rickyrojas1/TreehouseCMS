@@ -83,6 +83,9 @@
     "backfilled": {
       "type": "boolean",
       "default": false
+    },
+    "tags": {
+      "type": "json"
     }
   }
 }
