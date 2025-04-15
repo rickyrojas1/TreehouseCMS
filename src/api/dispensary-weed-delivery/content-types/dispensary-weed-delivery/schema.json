@@ -47,6 +47,14 @@
         "preset": "toolbar"
       },
       "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "County": {
+      "type": "enumeration",
+      "enum": [
+        "Rockland",
+        "Orange",
+        "Westchester"
+      ]
     }
   }
 }
