@@ -47,4 +47,14 @@ module.exports = ({ env }) => ({
         baseHref: env('NODE_ENV') === 'production' ? 'https://treehouse.up.railway.app' : 'http://localhost:1337',
       },
     },
+    scheduler: {
+		enabled: true,
+		config: {
+			contentTypes: {
+				'api::blog-post.blog-post': {
+
+        }
+			}
+		}
+	},
   });
