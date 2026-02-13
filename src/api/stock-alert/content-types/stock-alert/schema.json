@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stock_alerts",
+  "info": {
+    "singularName": "stock-alert",
+    "pluralName": "stock-alerts",
+    "displayName": "Stock Alert",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productId": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "productSlug": {
+      "type": "string"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "productImage": {
+      "type": "string"
+    },
+    "brandName": {
+      "type": "string"
+    },
+    "notificationSent": {
+      "type": "boolean"
+    }
+  }
+}
