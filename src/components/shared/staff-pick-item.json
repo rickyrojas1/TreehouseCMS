@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_shared_staff_pick_items",
+  "info": {
+    "displayName": "staffPickItem",
+    "icon": "star",
+    "description": "Single product in a user's pick list (Dutchie product reference + display snapshot)."
+  },
+  "options": {},
+  "attributes": {
+    "rank": {
+      "type": "integer",
+      "min": 1,
+      "max": 100,
+      "required": true
+    },
+    "dutchieId": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "productName": {
+      "type": "string"
+    },
+    "productImageUrl": {
+      "type": "string"
+    },
+    "brandName": {
+      "type": "string"
+    }
+  }
+}

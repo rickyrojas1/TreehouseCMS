@@ -72,12 +72,7 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
+      "allowedTypes": ["images"]
     },
     "dutchieId": {
       "type": "uid"
@@ -96,6 +91,23 @@
     },
     "birthDate": {
       "type": "date"
+    },
+    "isStaff": {
+      "type": "boolean",
+      "default": false
+    },
+    "showOnStaffPicks": {
+      "type": "boolean",
+      "default": false
+    },
+    "teamProfileAbout": {
+      "type": "text"
+    },
+    "staff_pick_submissions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::staff-pick-submission.staff-pick-submission",
+      "mappedBy": "budtender"
     }
   }
 }

@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_reviews",
+  "info": {
+    "singularName": "product-review",
+    "pluralName": "product-reviews",
+    "displayName": "Product Review",
+    "description": "First-party product reviews (customers and staff); published by default, removable in Strapi admin."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rating": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 5
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "isAnonymous": {
+      "type": "boolean",
+      "default": false
+    },
+    "displayName": {
+      "type": "string",
+      "required": true
+    },
+    "isStaffReview": {
+      "type": "boolean",
+      "default": false
+    },
+    "isVerifiedPurchase": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSample": {
+      "type": "boolean",
+      "default": false
+    },
+    "productSlug": {
+      "type": "string",
+      "required": true
+    },
+    "productDutchieId": {
+      "type": "string"
+    },
+    "productNameSnapshot": {
+      "type": "string"
+    },
+    "productImageUrlSnapshot": {
+      "type": "string"
+    },
+    "productCategorySnapshot": {
+      "type": "string"
+    },
+    "productSubcategorySnapshot": {
+      "type": "string"
+    },
+    "productBrandIdSnapshot": {
+      "type": "string"
+    },
+    "productBrandNameSnapshot": {
+      "type": "string"
+    },
+    "wasStaffPickSnapshot": {
+      "type": "boolean",
+      "default": false
+    },
+    "reviewStatus": {
+      "type": "enumeration",
+      "enum": ["pending", "approved", "rejected", "hidden"],
+      "default": "approved",
+      "required": true
+    },
+    "helpfulCount": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "isPublishedToSite": {
+      "type": "boolean",
+      "default": true
+    },
+    "isPostedToDiscord": {
+      "type": "boolean",
+      "default": false
+    },
+    "moderatedAt": {
+      "type": "datetime"
+    },
+    "reviewer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "moderatedBy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product"
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images", "videos", "files"]
+    }
+  }
+}

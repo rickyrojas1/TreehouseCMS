@@ -1,0 +1,13 @@
+---
+description: Persistent conventions for TreehouseCMS
+alwaysApply: true
+---
+
+# TreehouseCMS conventions
+
+- Read `README.md` before making code changes in this repo.
+- Keep business invariants in Strapi lifecycle hooks/services, not duplicated in clients.
+- When review records change (create/update/delete/moderate), keep product review summary stats in sync.
+- Prefer idempotent recompute logic for aggregate stats to avoid drift.
+- Handle reassignment cases by updating aggregates for both previous and current product slugs.
+- Keep admin moderation actions aligned with review visibility rules (`reviewStatus`, `isPublishedToSite`).

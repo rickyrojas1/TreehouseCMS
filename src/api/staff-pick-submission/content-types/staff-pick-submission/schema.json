@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staff_pick_submissions",
+  "info": {
+    "singularName": "staff-pick-submission",
+    "pluralName": "staff-pick-submissions",
+    "displayName": "User product picks",
+    "description": "Each user's ordered product pick list (one submission per user). Used for team profiles and homepage staff carousel when the user is staff and showOnStaffPicks is enabled."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "notes": {
+      "type": "text"
+    },
+    "budtender": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "staff_pick_submissions",
+      "required": true
+    },
+    "picks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.staff-pick-item",
+      "required": false,
+      "min": 0,
+      "max": 100
+    }
+  }
+}

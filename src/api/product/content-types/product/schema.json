@@ -84,6 +84,15 @@
       "type": "boolean",
       "default": false
     },
+    "reviewCount": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "reviewAverage": {
+      "type": "decimal",
+      "default": 0
+    },
     "tags": {
       "type": "json"
     }
