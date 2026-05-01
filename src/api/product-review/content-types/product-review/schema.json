@@ -52,6 +52,9 @@
     "productDutchieId": {
       "type": "string"
     },
+    "productPosId": {
+      "type": "string"
+    },
     "productNameSnapshot": {
       "type": "string"
     },

@@ -34,7 +34,7 @@ This example deploys self-hosted version of [Strapi](https://strapi.io/). Intern
 
 This project includes:
 
-- **`product-review`** — ratings, body, optional title/media, reviewer + moderation fields (`reviewStatus`, `isPublishedToSite`, `isPostedToDiscord`, etc.), and product identifiers (`productSlug`, `productDutchieId`, `productNameSnapshot`).
+- **`product-review`** — ratings, body, optional title/media, reviewer + moderation fields (`reviewStatus`, `isPublishedToSite`, `isPostedToDiscord`, etc.), and product identifiers (`productSlug`, `productDutchieId`, `productPosId`, `productNameSnapshot`).
 - **`staff-pick-submission`** (API id unchanged) — **User product picks**: one row per user, linked via the `budtender` relation (owner of the list) + repeatable **`shared.staff-pick-item`** (rank, `dutchieId`, `slug`, optional name/image/brand snapshots).
 - **Extended `User`** — `isStaff`, **`showOnStaffPicks`** (when true with `isStaff`, the storefront homepage carousel can include this user's picks), plus relations to reviews and pick submissions.
 
