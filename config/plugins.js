@@ -9,20 +9,25 @@ module.exports = ({ env }) => ({
     },
     upload: {
       config: {
-        provider: env('NODE_ENV') === 'production' ? 'cloudinary' : 'local',
+        provider: env('NODE_ENV') === 'production' || env.bool('STRAPI_UPLOAD_USE_R2', false) ? 'aws-s3' : 'local',
         providerOptions: {
-          cloud_name: env('CLOUDINARY_NAME'),
-          api_key: env('CLOUDINARY_KEY'),
-          api_secret: env('CLOUDINARY_SECRET'),
+          baseUrl: env('AWS_BASE_URL'),
+          rootPath: env('AWS_ROOT_PATH', ''),
+          s3Options: {
+            credentials: {
+              accessKeyId: env('AWS_ACCESS_KEY_ID'),
+              secretAccessKey: env('AWS_ACCESS_SECRET'),
+            },
+            region: env('AWS_REGION', 'auto'),
+            endpoint: env('AWS_ENDPOINT'),
+            params: {
+              Bucket: env('AWS_BUCKET'),
+            },
+          },
         },
-        // provider: 'cloudinary',
-        // providerOptions: {
-        //   cloud_name: env('CLOUDINARY_NAME'),
-        //   api_key: env('CLOUDINARY_KEY'),
-        //   api_secret: env('CLOUDINARY_SECRET'),
-        // },
         actionOptions: {
           upload: {},
+          uploadStream: {},
           delete: {},
         },
       },

@@ -1,3 +1,18 @@
+function mediaCspHosts() {
+  const hosts = ['res.cloudinary.com'];
+  const base = process.env.AWS_BASE_URL;
+  if (base) {
+    try {
+      hosts.push(new URL(base).hostname);
+    } catch {
+      // ignore invalid AWS_BASE_URL
+    }
+  }
+  return hosts;
+}
+
+const strapiMediaHosts = mediaCspHosts();
+
 module.exports = [
   'strapi::errors',
   {
@@ -7,8 +22,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
-          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'img-src': ["'self'", 'data:', 'blob:', ...strapiMediaHosts],
+          'media-src': ["'self'", 'data:', 'blob:', ...strapiMediaHosts],
           upgradeInsecureRequests: null,
         },
       },
