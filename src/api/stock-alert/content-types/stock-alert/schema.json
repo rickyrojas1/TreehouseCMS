@@ -12,11 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "alertKind": {
+      "type": "enumeration",
+      "enum": ["product", "filter"],
+      "default": "product",
+      "required": false
+    },
     "productId": {
       "type": "string"
     },
     "email": {
-      "type": "email"
+      "type": "email",
+      "required": true
     },
     "productSlug": {
       "type": "string"
@@ -30,8 +37,24 @@
     "brandName": {
       "type": "string"
     },
+    "brandId": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "strainType": {
+      "type": "string"
+    },
+    "size": {
+      "type": "string"
+    },
+    "filterKey": {
+      "type": "string"
+    },
     "notificationSent": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     }
   }
 }
