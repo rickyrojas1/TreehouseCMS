@@ -47,7 +47,8 @@
     },
     "productSlug": {
       "type": "string",
-      "required": true
+      "required": true,
+      "index": true
     },
     "productDutchieId": {
       "type": "string"
@@ -81,7 +82,8 @@
       "type": "enumeration",
       "enum": ["pending", "approved", "rejected", "hidden"],
       "default": "approved",
-      "required": true
+      "required": true,
+      "index": true
     },
     "helpfulCount": {
       "type": "integer",
@@ -90,7 +92,8 @@
     },
     "isPublishedToSite": {
       "type": "boolean",
-      "default": true
+      "default": true,
+      "index": true
     },
     "isPostedToDiscord": {
       "type": "boolean",
