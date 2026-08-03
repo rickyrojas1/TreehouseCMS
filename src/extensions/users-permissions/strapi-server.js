@@ -63,6 +63,9 @@ module.exports = (plugin) => {
     path: "/auth/refresh-session",
     handler: "auth.refreshSession",
     config: {
+      // Empty prefix mounts at /api/auth/... (same as other auth routes).
+      // Without this, Strapi mounts under /api/users-permissions/auth/...
+      prefix: "",
       auth: false,
       policies: [],
       middlewares: [],
