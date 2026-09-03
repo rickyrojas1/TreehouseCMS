@@ -17,6 +17,9 @@
       "type": "string",
       "required": true
     },
+    "posId": {
+      "type": "string"
+    },
     "slug": {
       "type": "string",
       "required": true

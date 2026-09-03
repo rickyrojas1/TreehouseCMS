@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "staff_pick_sync_states",
+  "info": {
+    "singularName": "staff-pick-sync-state",
+    "pluralName": "staff-pick-sync-states",
+    "displayName": "Staff Pick Sync State",
+    "description": "Dirty flag / revision for syncing staff favorites to Dutchie POS Staff Pick package tags."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "needsSync": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "revision": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "lastSyncedRevision": {
+      "type": "integer",
+      "default": 0,
+      "required": true,
+      "min": 0
+    },
+    "lastSyncedAt": {
+      "type": "datetime"
+    },
+    "lastDesiredHash": {
+      "type": "string"
+    },
+    "lastSyncResult": {
+      "type": "text"
+    }
+  }
+}
