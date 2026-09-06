@@ -37,6 +37,10 @@
     },
     "lastSyncResult": {
       "type": "text"
+    },
+    "taggedAtByPosProductId": {
+      "type": "json",
+      "default": {}
     }
   }
 }
