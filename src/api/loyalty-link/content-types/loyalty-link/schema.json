@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "loyalty_links",
+  "info": {
+    "singularName": "loyalty-link",
+    "pluralName": "loyalty-links",
+    "displayName": "Loyalty Link",
+    "description": "Links a site user to their Dutchie Plus customer. Server API token only: never grant Public or Authenticated permissions on this type."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "userId": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "emailVerifiedAt": {
+      "type": "datetime"
+    },
+    "plusCustomerId": {
+      "type": "string"
+    },
+    "linkedVia": {
+      "type": "enumeration",
+      "enum": [
+        "email_code",
+        "alt_email",
+        "alpine_migration"
+      ]
+    },
+    "linkedAt": {
+      "type": "datetime"
+    },
+    "pendingEmail": {
+      "type": "email"
+    },
+    "codeHash": {
+      "type": "string"
+    },
+    "codeExpiresAt": {
+      "type": "datetime"
+    },
+    "codeAttempts": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "codeSendCount": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "codeSendWindowStart": {
+      "type": "datetime"
+    },
+    "lastCodeSentAt": {
+      "type": "datetime"
+    },
+    "loyaltyConsentAt": {
+      "type": "datetime"
+    },
+    "loyaltyConsentVersion": {
+      "type": "string"
+    },
+    "alpineIqContactId": {
+      "type": "string"
+    }
+  }
+}
