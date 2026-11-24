@@ -1,11 +1,9 @@
 "use strict"
 
+// Dedicated shared secret with the website. Never fall back to an API token:
+// anyone holding that token could mint a JWT for any user.
 function getExpectedRefreshSecret() {
-  return (
-    process.env.STRAPI_SESSION_REFRESH_SECRET ||
-    process.env.STRAPI_API ||
-    process.env.LOCAL_STRAPI_API
-  )
+  return process.env.STRAPI_SESSION_REFRESH_SECRET || undefined
 }
 
 function isAuthorizedRefreshRequest(ctx) {
